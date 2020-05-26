@@ -1,4 +1,4 @@
-## Clever Programmer's 5-Day JavaScript Challenge
+## Clever Programmer's 5-Day JavaScript Challenge: Google Maps
 
 ## Google Maps API Key
 
