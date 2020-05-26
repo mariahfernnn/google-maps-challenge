@@ -46,3 +46,7 @@ body {
     background-color: transparent;
     color: white;
 }
+
+.search input:focus {
+    outline: none;
+}
