@@ -19,3 +19,15 @@ body {
     text-transform: uppercase;
     color: #333333;
 }
+
+.search-container {
+    width: 400px;
+    height: 60px;
+    background-color: #454E53;
+    position: absolute;
+    z-index: 30;
+    top: 230px;
+    left: 100px;
+    border-radius: 30px;
+
+}
