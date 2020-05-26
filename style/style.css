@@ -50,3 +50,8 @@ body {
 .search input:focus {
     outline: none;
 }
+
+.search i {
+    color: white;
+    font-size: 25px;
+}
