@@ -55,3 +55,14 @@ body {
     color: white;
     font-size: 25px;
 }
+
+.stores-list-container {
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    z-index:  30;
+    top: 320px;
+    left: 100px;
+    border-radius: 30px;
+    bottom: 20px;
+}
