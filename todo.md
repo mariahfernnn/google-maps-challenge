@@ -1,8 +1,8 @@
 # Plan Of Action
 
-- Create wireframe
-- Set up the base HTML structure
-- Import Google Maps into the window
-- Add the text Store Locator
+- Create wireframe DONE
+- Set up the base HTML structure DONE 
+- Import Google Maps into the window DONE
+- Add the text Store Locator DONE 
 - Add input box
 - Add Store List Container
