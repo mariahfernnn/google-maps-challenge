@@ -83,7 +83,9 @@ body {
     transition: 0.3s;
 }
 
-.child-2 {
+/* DAY 2 HOMEWORK - CSS STYLING - commented out for now */
+
+/* .child-2 {
     width: auto;
     position: absolute;
     top: 0;
@@ -144,9 +146,9 @@ body {
 
 .spot-address-4 {
     margin-left: 10%;
-}
+} */
 
-/* .spot {
+.spot {
     background-color: white;
     position: absolute;
     z-index: 30;
@@ -160,4 +162,4 @@ body {
     z-index: 30;
     bottom: 320px;
     left: 50px;
-} */
+}
