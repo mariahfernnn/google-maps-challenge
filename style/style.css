@@ -80,8 +80,8 @@ body {
     width: auto;
     position: absolute;
     top: 0;
-    left: 50px;
-    right: 50px;
+    left: 30px;
+    right: 30px;
     top: 50px;
     /* border-bottom: 1px solid #bdbdbd;  */
 }
@@ -100,8 +100,8 @@ body {
     width: auto;
     position: absolute;
     top: 0;
-    left: 50px;
-    right: 50px;
+    left: 30px;
+    right: 30px;
     top: 150px;
     /* border-bottom: 1px solid #bdbdbd; */
 }
@@ -120,8 +120,8 @@ body {
     width: auto;
     position: absolute;
     top: 0;
-    left: 50px;
-    right: 50px;
+    left: 30px;
+    right: 30px;
     top: 250px;
     /* border-bottom: 1px solid #bdbdbd;  */
 }
