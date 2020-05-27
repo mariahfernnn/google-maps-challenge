@@ -60,12 +60,27 @@ body {
     width: 400px;
     background-color: white;
     position: absolute;
-    z-index:  30;
+    z-index: 30;
     top: 320px;
     left: 100px;
     border-radius: 30px;
     bottom: 20px;
 }
+
+.store-container {
+    position: absolute;
+    top: 0;
+}
+
+/* .child-1 {
+    left: 0;
+    border: solid green;
+}
+
+.child-2  {
+    left: 250px;
+    border: solid red;
+} */
 
 .store-address {
     background-color: white;
@@ -82,3 +97,4 @@ body {
     bottom: 320px;
     left: 50px;
 }
+
