@@ -68,21 +68,17 @@ body {
 }
 
 .store-address {
-    /* width: 200px; */
     background-color: white;
     position: absolute;
     z-index: 30;
     bottom: 340px;
     left: 50px;
-    border-radius: 30px;
 }
 
 .store-phone-number {
-    left: 50px;
-    z-index: 30;
-    position: absolute;
-    /* width: 400px; */
     background-color: white;
+    position: absolute;
+    z-index: 30;
     bottom: 320px;
-    border-radius: 30px;
+    left: 50px;
 }
