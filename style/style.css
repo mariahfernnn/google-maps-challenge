@@ -84,6 +84,10 @@ body {
     border-bottom: 1px solid #bdbdbd; 
 }
 
+.spot-2 {
+    font-weight: bold;
+}
+
 .child-3 {
     width: auto;
     position: absolute;
@@ -92,6 +96,10 @@ body {
     right: 50px;
     top: 150px;
     border-bottom: 1px solid #bdbdbd;
+}
+
+.spot-3 {
+    font-weight: bold;
 }
 
 .child-4 {
@@ -104,7 +112,11 @@ body {
     border-bottom: 1px solid #bdbdbd; 
 }
 
-.spot {
+.spot-4 {
+    font-weight: bold;
+}
+
+/* .spot {
     background-color: white;
     position: absolute;
     z-index: 30;
@@ -118,4 +130,4 @@ body {
     z-index: 30;
     bottom: 320px;
     left: 50px;
-}
+} */
