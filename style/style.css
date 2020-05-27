@@ -56,7 +56,7 @@ body {
     font-size: 25px;
 }
 
-.stores-list-container {
+.spots-list-container {
     width: 400px;
     background-color: white;
     position: absolute;
@@ -76,7 +76,7 @@ body {
     top: 90px;
 }
 
-.store-address {
+.spot {
     background-color: white;
     position: absolute;
     z-index: 30;
@@ -84,7 +84,7 @@ body {
     left: 50px;
 }
 
-.store-phone-number {
+.spot-address {
     background-color: white;
     position: absolute;
     z-index: 30;
