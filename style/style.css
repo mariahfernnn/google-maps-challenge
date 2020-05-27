@@ -67,20 +67,12 @@ body {
     bottom: 20px;
 }
 
-.store-container {
+.child-2 {
     position: absolute;
     top: 0;
+    left: 50px;
+    top: 90px;
 }
-
-/* .child-1 {
-    left: 0;
-    border: solid green;
-}
-
-.child-2  {
-    left: 250px;
-    border: solid red;
-} */
 
 .store-address {
     background-color: white;
@@ -97,4 +89,3 @@ body {
     bottom: 320px;
     left: 50px;
 }
-
