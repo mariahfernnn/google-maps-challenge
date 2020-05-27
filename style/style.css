@@ -70,7 +70,35 @@ body {
     opacity: 0.8;
 }
 
+.spot {
+    background-color: white;
+    position: absolute;
+    z-index: 30;
+    bottom: 340px;
+    left: 50px;
+}
+
+.spot-address {
+    background-color: white;
+    position: absolute;
+    z-index: 30;
+    bottom: 320px;
+    left: 50px;
+}
+
+.spots-list {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .spot-container {
+    display: flex;
+    border-bottom: 1px solid #979797;
+}
+
+/* DAY 2 HOMEWORK - CSS STYLING - commented out for now */
+
+/* .spot-container {
     border: 1px solid #333333;
     border-radius: 20px;
     height: 20%;
@@ -81,9 +109,7 @@ body {
     box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
     opacity: 0.6;
     transition: 0.3s;
-}
-
-/* DAY 2 HOMEWORK - CSS STYLING - commented out for now */
+} */
 
 /* .child-2 {
     width: auto;
@@ -148,18 +174,3 @@ body {
     margin-left: 10%;
 } */
 
-.spot {
-    background-color: white;
-    position: absolute;
-    z-index: 30;
-    bottom: 340px;
-    left: 50px;
-}
-
-.spot-address {
-    background-color: white;
-    position: absolute;
-    z-index: 30;
-    bottom: 320px;
-    left: 50px;
-}
