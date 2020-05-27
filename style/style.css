@@ -66,3 +66,13 @@ body {
     border-radius: 30px;
     bottom: 20px;
 }
+
+.store-address {
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    z-index: 30;
+    bottom: 340px;
+    left: 50px;
+    border-radius: 30px;
+}
