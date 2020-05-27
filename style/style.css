@@ -72,6 +72,7 @@ body {
 
 .spot-container {
     border: 1px solid green;
+    border-radius: 30px;
 }
 
 .child-2 {
@@ -81,7 +82,7 @@ body {
     left: 50px;
     right: 50px;
     top: 50px;
-    border-bottom: 1px solid #bdbdbd; 
+    /* border-bottom: 1px solid #bdbdbd;  */
 }
 
 .spot-2 {
@@ -95,7 +96,7 @@ body {
     left: 50px;
     right: 50px;
     top: 150px;
-    border-bottom: 1px solid #bdbdbd;
+    /* border-bottom: 1px solid #bdbdbd; */
 }
 
 .spot-3 {
@@ -109,7 +110,7 @@ body {
     left: 50px;
     right: 50px;
     top: 250px;
-    border-bottom: 1px solid #bdbdbd; 
+    /* border-bottom: 1px solid #bdbdbd;  */
 }
 
 .spot-4 {
