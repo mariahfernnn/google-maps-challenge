@@ -8,9 +8,13 @@ function initMap() {
     center: torontoCanada,
     zoom: 11
   });
+  displaySpots();
 }
 
 function displaySpots() {
-  
+
+  spots.forEach(function(spot) {
+    console.log(spots)
+  })
 }
 
