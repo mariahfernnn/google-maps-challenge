@@ -103,28 +103,12 @@ body {
     margin-top: 30px;
 }
 
-/* .spot-name {
-    background-color: white;
-    position: absolute;
-    z-index: 30;
-    bottom: 340px;
-    left: 50px;
-} */
-
 .spot-address {
     /* color: #B5ADAD; */
     color: #514C4C;
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
-/* .spot-address {
-    background-color: white;
-    position: absolute;
-    z-index: 30;
-    bottom: 320px;
-    left: 50px;
-} */
 
 .spot-number-container {
     align-items: center;
@@ -146,74 +130,4 @@ body {
     display: block;
 }
 
-/* DAY 2 HOMEWORK - CSS STYLING - commented out for now */
-
-/* .spot-container {
-    border: 1px solid #333333;
-    border-radius: 20px;
-    height: 20%;
-}
-
-/* .child-2 {
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 30px;
-    right: 30px;
-    top: 50px;
-}
-
-.spot-2 {
-    font-weight: bold;
-    margin-left: 10%;
-    margin-top: 5%;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.spot-address-2 {
-    margin-left: 10%;
-}
-
-.child-3 {
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 30px;
-    right: 30px;
-    top: 150px;
-}
-
-.spot-3 {
-    font-weight: bold;
-    margin-left: 10%;
-    margin-top: 5%;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.spot-address-3 {
-    margin-left: 10%;
-}
-
-.child-4 {
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 30px;
-    right: 30px;
-    top: 250px;
-}
-
-.spot-4 {
-    font-weight: bold;
-    margin-left: 10%;
-    margin-top: 5%;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.spot-address-4 {
-    margin-left: 10%;
-} */
 
