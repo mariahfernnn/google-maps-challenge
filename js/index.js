@@ -16,13 +16,17 @@ function initMap() {
   setOnClickListener()
 }
 
+function searchSpots() {
+  
+}
+
 function setOnClickListener() {
 
   var spotElements = document.querySelectorAll('.spot-container');
   // console.log(spotElements);
   spotElements.forEach(function(elem, index) {
     elem.addEventListener('click', function() {
-      
+      google.maps.event.trigger(markers[index], 'click');
     })
   })
 
@@ -60,17 +64,17 @@ function showSpotsMarkers() {
     var latlng = new google.maps.LatLng(
       spot.Y,
       spot.X);
-    console.log(latlng);
+    // console.log(latlng);
     var name = spot.Name;
     var address = spot.Address;
     var district = spot.District;
     // bounds.extend(latlng);
-    createMarker(latlng, name, address, district);
+    createMarker(latlng, name, address, district, index);
   })
   // map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address) {
+function createMarker(latlng, name, address, index) {
   var html = `
       <div class="spot-info-window">
           <div class="spot-info-name">
@@ -96,6 +100,7 @@ function createMarker(latlng, name, address) {
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
+    // label: `${index}`,
     icon: {
       url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
     }
