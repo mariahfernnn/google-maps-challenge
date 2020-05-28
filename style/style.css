@@ -156,6 +156,20 @@ body {
 
 .spot-info-address {
     margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.spot-info-address .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #1985A1;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
 }
 
 
