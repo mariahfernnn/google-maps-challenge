@@ -73,6 +73,8 @@ body {
 .spots-list {
     padding-left: 20px;
     padding-right: 20px;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .spot-container {
