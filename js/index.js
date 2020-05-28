@@ -10,6 +10,7 @@ function initMap() {
     center: torontoCanada,
     zoom: 8
   });
+  infoWindow = new.google.maps.InfoWindow();
   displaySpots()
   showSpotsMarkers()
 }
