@@ -14,13 +14,15 @@ function initMap() {
 function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot) {
+    var name = spot.Name;
+    var address = spot.Address;
     spotsHTML += `
     <div class="spot-container">
         <div class="spot-info-container">
             <div class="spot-name">
-                <span>Riverdale Park East</span>
+                <span>${name}</span>
             </div>
-            <div class="spot-address">550 Broadview Ave</div>
+            <div class="spot-address">${address}</div>
         </div>
         <div class="spot-number-container">
             <div class="spot-number">
