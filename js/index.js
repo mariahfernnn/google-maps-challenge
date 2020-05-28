@@ -58,13 +58,25 @@ function showSpotsMarkers() {
 }
 
 function createMarker(latlng, name, address) {
-  var html = "<b>" + name + 
-             "</b> <br/>" + `
-             <i class="fas fa-paper-plane"></i>
-             <a href="http://maps.google.com/maps?q=${address}" target="_blank">
-                   ${address}
-             </a>
-             `;
+  var html = `
+      <div class="spot-info-window">
+          <div class="spot-name">
+            ${name}
+          </div>
+          <div class="spot-address">
+            ${address}
+          </div>
+      </div>
+  `;
+
+  // var html = "<b>" + name + 
+  //            "</b> <br/>" + `
+  //            <i class="fas fa-paper-plane"></i>
+  //            <a href="http://maps.google.com/maps?q=${address}" target="_blank">
+  //                  ${address}
+  //            </a>
+  //            `;
+
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
