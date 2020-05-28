@@ -13,7 +13,7 @@ function initMap() {
 
 function displaySpots() {
   var spotsHTML = "";
-  spots.forEach(function(spot) {
+  spots.forEach(function(spot, index) {
     var name = spot.Name;
     var address = spot.Address;
     spotsHTML += `
@@ -26,7 +26,7 @@ function displaySpots() {
         </div>
         <div class="spot-number-container">
             <div class="spot-number">
-                1
+                ${index+1}
             </div>
         </div>
     </div>
