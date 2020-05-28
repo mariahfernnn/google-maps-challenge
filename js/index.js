@@ -15,6 +15,10 @@ function initMap() {
   showSpotsMarkers()
 }
 
+function setOnClickListener() {
+  
+}
+
 function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
