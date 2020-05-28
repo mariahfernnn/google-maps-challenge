@@ -61,7 +61,10 @@ function createMarker(latlng, name, address, district) {
   var html = "<b>" + name + "</b> <br/>" + address + "</b> <br/>" + district;
   var marker = new google.maps.Marker({
     map: map,
-    position: latlng
+    position: latlng,
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    }
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
