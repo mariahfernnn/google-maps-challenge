@@ -19,7 +19,10 @@ function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
+
+    var torontoOnly = new Set(['Toronto', 'Toronto and East York', 'West Toronto York']);
     var district = spot.District;
+
     var address = spot.Address;
     spotsHTML += `
     <div class="spot-container">
