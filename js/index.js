@@ -121,7 +121,6 @@ function createMarker(latlng, name, address, index) {
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
-    // label: `${index}`,
     icon: {
       url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
     }
