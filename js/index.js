@@ -35,3 +35,16 @@ function displaySpots() {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
+function createMarker(latlng, name, address) {
+  var html = "<b>" + name + "</b> <br/>" + address;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: latlng
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.setContent(html);
+    infoWindow.open(map, marker);
+  });
+  markers.push(marker);
+}
+
