@@ -19,12 +19,14 @@ function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
+    var district = spot.District;
     var address = spot.Address;
     spotsHTML += `
     <div class="spot-container">
         <div class="spot-info-container">
             <div class="spot-name">
                 <span>${name}</span>
+                <span>${district}</span>
             </div>
             <div class="spot-address">${address}</div>
         </div>
