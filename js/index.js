@@ -57,14 +57,14 @@ function showSpotsMarkers() {
   // map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address, district) {
+function createMarker(latlng, name, address) {
   var html = "<b>" + name + 
              "</b> <br/>" + `
+             <i class="fas fa-paper-plane"></i>
              <a href="http://maps.google.com/maps?q=${address}" target="_blank">
                    ${address}
              </a>
-             `
-             + "</b> <br/>" + district;
+             `;
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
