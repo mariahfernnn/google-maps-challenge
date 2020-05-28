@@ -64,6 +64,9 @@ function createMarker(latlng, name, address) {
             ${name}
           </div>
           <div class="spot-info-address">
+            <div class="circle">
+              <i class="fas fa-location-arrow"></i>
+            </div>
             ${address}
           </div>
       </div>
