@@ -60,10 +60,10 @@ function showSpotsMarkers() {
 function createMarker(latlng, name, address) {
   var html = `
       <div class="spot-info-window">
-          <div class="spot-name">
+          <div class="spot-info-name">
             ${name}
           </div>
-          <div class="spot-address">
+          <div class="spot-info-address">
             ${address}
           </div>
       </div>

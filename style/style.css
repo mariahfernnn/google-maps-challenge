@@ -147,4 +147,15 @@ body {
     padding: 8px;
 }
 
+.spot-info-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+    border-bottom: 1px solid #000029;
+}
+
+.spot-info-address {
+    margin-top: 8px;
+}
+
 
