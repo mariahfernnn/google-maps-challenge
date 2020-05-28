@@ -112,6 +112,14 @@ body {
     margin-bottom: 15px;
 }
 
+.spot-district {
+    /* color: #B5ADAD; */
+    font-size: 10px;
+    color: #514C4C;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .spot-number-container {
     align-items: center;
     display: flex;

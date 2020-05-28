@@ -26,9 +26,9 @@ function displaySpots() {
         <div class="spot-info-container">
             <div class="spot-name">
                 <span>${name}</span>
-                <span>${district}</span>
             </div>
             <div class="spot-address">${address}</div>
+            <div class="spot-district">${district}</div>
         </div>
         <div class="spot-number-container">
             <div class="spot-number">
