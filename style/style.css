@@ -92,14 +92,15 @@ body {
     flex-grow: 1;
 }
 
+/* .spot-info-container:hover {
+    color: black !important;
+} */
+
 .spot-name {
     font-size: 21px;
-    color: #514C4C;
+    /* color: #514C4C; */
+    color: #333333;
     margin-top: 30px;
-}
-
-.spot-name:hover {
-    color: black !important;
 }
 
 /* .spot-name {
@@ -111,7 +112,8 @@ body {
 } */
 
 .spot-address {
-    color: #B5ADAD;
+    /* color: #B5ADAD; */
+    color: #514C4C;
     margin-top: 15px;
     margin-bottom: 15px;
 }
