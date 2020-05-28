@@ -78,7 +78,17 @@ body {
 .spot-container {
     display: flex;
     border-bottom: 1px solid #979797;
+    border: 1px solid green;
 }
+
+.spot-container:hover {
+    width: 100%;
+    background-color:  rgb(51, 197, 213);
+    box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
+    opacity: 0.6;
+    transition: 0.3s;
+    border-radius: 30px;
+} 
 
 .spot-info-container {
     flex-grow: 1;
@@ -139,13 +149,6 @@ body {
     border-radius: 20px;
     height: 20%;
 }
-
-.spot-container:hover {
-    background-color:  rgb(51, 197, 213);
-    box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
-    opacity: 0.6;
-    transition: 0.3s;
-} */
 
 /* .child-2 {
     width: auto;
