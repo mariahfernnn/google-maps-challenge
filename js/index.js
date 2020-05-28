@@ -20,8 +20,8 @@ function displaySpots() {
   spots.forEach(function(spot, index) {
     var name = spot.Name;
 
-    var torontoOnly = new Set(['Toronto', 'Toronto and East York', 'West Toronto York']);
-    var district = spot.District;
+    var district = spot.District === 'West Toronto York';
+    console.log("What are the districts?",district)
 
     var address = spot.Address;
     spotsHTML += `
@@ -50,11 +50,12 @@ function showSpotsMarkers() {
     var latlng = new google.maps.LatLng(
       spot.Y,
       spot.X);
-    console.log(latlng);
+    // console.log(latlng);
     var name = spot.Name;
     var address = spot.Address;
+    var district = spot.District === 'West Toronto York';
     // bounds.extend(latlng);
-    createMarker(latlng, name, address);
+    createMarker(latlng, name, address, district);
   })
   // map.fitBounds(bounds);
 }
