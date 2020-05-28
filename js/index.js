@@ -1,5 +1,6 @@
 var map;
 var markers = [];
+var infoWindow;
 function initMap() {
   var torontoCanada = {
     lat: 43.651070,
@@ -7,7 +8,7 @@ function initMap() {
   }
   map = new google.maps.Map(document.getElementById('map'), {
     center: torontoCanada,
-    zoom: 11
+    zoom: 8
   });
   displaySpots()
   showSpotsMarkers()
@@ -38,7 +39,7 @@ function displaySpots() {
 }
 
 function showSpotsMarkers() {
-  var bounds = new google.maps.LatLngBounds();
+  // var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index) {
     var latlng = new google.maps.LatLng(
       spot.Y,
@@ -46,10 +47,10 @@ function showSpotsMarkers() {
     console.log(latlng);
     var name = spot.Name;
     var address = spot.Address;
-    bounds.extend(latlng);
+    // bounds.extend(latlng);
     createMarker(latlng, name, address);
   })
-  map.fitBounds(bounds);
+  // map.fitBounds(bounds);
 }
 
 function createMarker(latlng, name, address) {
