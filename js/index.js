@@ -17,6 +17,23 @@ function initMap() {
 }
 
 function searchSpots() {
+  var foundSpots = [];
+  // change this variable name to address
+  var postalCode = document.getElementById('postal-code-input').value;
+  
+  // console.log(postalCode)
+  spots.forEach(function(spot) {
+      var address = spot.Address;
+      // console.log(address)
+      if(address == postalCode) {
+        foundSpots.push();
+      }
+  })
+  // console.log(foundSpots);
+  displaySpots(foundSpots);
+}
+
+function clearLocations() {
   
 }
 
@@ -32,7 +49,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots() {
+function displaySpots(spots) {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
