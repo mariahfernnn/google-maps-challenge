@@ -8,13 +8,28 @@ function initMap() {
     center: torontoCanada,
     zoom: 11
   });
-  // displaySpots();
+  displaySpots();
 }
 
-// function displaySpots() {
-
-//   spots.forEach(function(spot) {
-//     console.log(spots)
-//   })
-// }
+function displaySpots() {
+  var spotsHTML = "";
+  spots.forEach(function(spot) {
+    spotsHTML += `
+    <div class="spot-container">
+        <div class="spot-info-container">
+            <div class="spot-name">
+                <span>Riverdale Park East</span>
+            </div>
+            <div class="spot-address">550 Broadview Ave</div>
+        </div>
+        <div class="spot-number-container">
+            <div class="spot-number">
+                1
+            </div>
+        </div>
+    </div>
+    `
+  });
+  document.querySelector('.spots-list').innerHTML = spotsHTML;
+}
 
