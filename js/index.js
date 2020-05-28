@@ -13,10 +13,19 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   displaySpots()
   showSpotsMarkers()
+  setOnClickListener()
 }
 
 function setOnClickListener() {
-  
+
+  var spotElements = document.querySelectorAll('.spot-container');
+  // console.log(spotElements);
+  spotElements.forEach(function(elem, index) {
+    elem.addEventListener('click', function() {
+      
+    })
+  })
+
 }
 
 function displaySpots() {
