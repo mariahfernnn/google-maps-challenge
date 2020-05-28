@@ -47,7 +47,7 @@ function showSpotsMarkers() {
     var latlng = new google.maps.LatLng(
       spot.Y,
       spot.X);
-    // console.log(latlng);
+    console.log(latlng);
     var name = spot.Name;
     var address = spot.Address;
     var district = spot.District;
@@ -58,7 +58,13 @@ function showSpotsMarkers() {
 }
 
 function createMarker(latlng, name, address, district) {
-  var html = "<b>" + name + "</b> <br/>" + address + "</b> <br/>" + district;
+  var html = "<b>" + name + 
+             "</b> <br/>" + `
+             <a href="http://maps.google.com/maps?q=${address}" target="_blank">
+                   ${address}
+             </a>
+             `
+             + "</b> <br/>" + district;
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
@@ -72,4 +78,7 @@ function createMarker(latlng, name, address, district) {
   });
   markers.push(marker);
 }
+
+
+
 
