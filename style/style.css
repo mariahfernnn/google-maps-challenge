@@ -141,4 +141,10 @@ body {
     display: block;
 }
 
+.spot-info-window {
+    min-width: 300px;
+    font-size: 18px;
+    padding: 8px;
+}
+
 
