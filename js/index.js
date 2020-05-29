@@ -326,7 +326,10 @@ function createMarker(latlng, name, address, statusText, phone, index) {
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
-    label: `${index+1}`,
+    label: {
+      text: `${index+1}`,
+      color: 'red'
+    },
     icon: iconBase 
   });
   google.maps.event.addListener(marker, 'click', function() {
