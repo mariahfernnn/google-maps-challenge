@@ -11,8 +11,7 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  showSpotsMarkers()
-  setOnClickListener()
+  // setOnClickListener()
 }
 
 function searchSpots() {
@@ -28,6 +27,8 @@ function searchSpots() {
   })
   // console.log(foundSpots);
   displaySpots(foundSpots);
+  showSpotsMarkers();
+
 }
 
 function clearLocations() {
