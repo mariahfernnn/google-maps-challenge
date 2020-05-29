@@ -18,7 +18,7 @@ function initMap() {
 
 function searchSpots() {
   var foundSpots = [];
-  // change this variable name to address
+  // Change this variable name to address
   var postalCode = document.getElementById('postal-code-input').value;
   
   // console.log(postalCode)
@@ -79,20 +79,36 @@ function displaySpots(spots) {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
+// function showSpotsMarkers() {
+//   var bounds = new google.maps.LatLngBounds();
+//   spots.forEach(function(spot, index) {
+//     var latlng = new google.maps.LatLng(
+//       spot.Y,
+//       spot.X);
+//     console.log(latlng);
+//     var name = spot.Name;
+//     var address = spot.Address;
+//     var district = spot.District;
+//     bounds.extend(latlng);
+//     createMarker(latlng, name, address, district, index);
+//   })
+//   map.fitBounds(bounds);
+// }
+
 function showSpotsMarkers() {
-  // var bounds = new google.maps.LatLngBounds();
-  spots.forEach(function(spot, index) {
-    var latlng = new google.maps.LatLng(
-      spot.Y,
-      spot.X);
-    // console.log(latlng);
-    var name = spot.Name;
-    var address = spot.Address;
-    var district = spot.District;
-    // bounds.extend(latlng);
-    createMarker(latlng, name, address, district, index);
+  var bounds = new google.maps.LatLngBounds();
+  spots.forEach(function(spot, index){
+      var latlng = new google.maps.LatLng(
+          spot.Y,
+          spot.X);
+      console.log(latlng);
+      var name = spot.Name;
+      var address = spot.Address;
+      var district = spot.District;
+      bounds.extend(latlng);
+      createMarker(latlng, name, address, district, index);
   })
-  // map.fitBounds(bounds);
+  map.fitBounds(bounds);
 }
 
 function createMarker(latlng, name, address, index) {
@@ -118,6 +134,7 @@ function createMarker(latlng, name, address, index) {
   //            </a>
   //            `;
 
+  // Add index label to marker later 
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
