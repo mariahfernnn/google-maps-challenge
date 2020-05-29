@@ -11,9 +11,8 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  displaySpots()
-  showSpotsMarkers()
-  setOnClickListener()
+  // showSpotsMarkers()
+  // setOnClickListener()
 }
 
 function searchSpots() {
@@ -55,7 +54,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots() {
+function displaySpots(spots) {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
@@ -81,7 +80,7 @@ function displaySpots() {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
-function showSpotsMarkers() {
+function showSpotsMarkers(spots) {
   var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index){
       var latlng = new google.maps.LatLng(
