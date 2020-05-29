@@ -315,13 +315,15 @@ function createMarker(latlng, name, address, statusText, phone, index) {
       </div>
   `;
 
-  var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
+  // var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  var iconBase = 'https://img.icons8.com/color/48/000000/';
+
 
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
     label: `${index+1}`,
-    icon: iconBase + 'grn-blank.png'
+    icon: iconBase + 'starbucks.png'
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
