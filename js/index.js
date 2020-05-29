@@ -18,24 +18,24 @@ function initMap() {
 }
 
 function searchSpots() {
-    var foundSpots = [];
-    var inputAddress = document.getElementById('address-input').value;
-    // console.log(findAddress)
-    if (inputAddress) {
-      spots.forEach(function(spot) {
-          var address = spot.Address;
-          // console.log(address)
-          if(address == inputAddress) {
-            foundSpots.push(spot);
-          }
-        })
-    } else {
-      foundSpots = spots;
-    }
-    // clearLocations();
-    // displaySpots(foundSpots);
-    // showSpotsMarkers(foundSpots);
-    // setOnClickListener();
+  var foundSpots = [];
+  var inputAddress = document.getElementById('address-input').value;
+  // console.log(findAddress)
+  if (inputAddress) {
+    spots.forEach(function(spot) {
+        var address = spot.Address;
+        // console.log(address)
+        if(address == inputAddress) {
+          foundSpots.push(spot);
+        }
+      })
+  } else {
+    foundSpots = spots;
+  }
+  // clearLocations();
+  // displaySpots(foundSpots);
+  // showSpotsMarkers(foundSpots);
+  // setOnClickListener();
 }
 
 // function clearLocations() {
@@ -54,7 +54,6 @@ function setOnClickListener() {
       google.maps.event.trigger(markers[index], 'click');
     })
   })
-
 }
 
 function displaySpots() {
@@ -119,6 +118,7 @@ function createMarker(latlng, name, address, index) {
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
+    label: '1',
     icon: {
       url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
     }
