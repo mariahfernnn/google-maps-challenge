@@ -111,14 +111,6 @@ function createMarker(latlng, name, address, index) {
       </div>
   `;
 
-  // var html = "<b>" + name + 
-  //            "</b> <br/>" + `
-  //            <i class="fas fa-paper-plane"></i>
-  //            <a href="http://maps.google.com/maps?q=${address}" target="_blank">
-  //                  ${address}
-  //            </a>
-  //            `;
-
   // Add index label to marker later 
   var marker = new google.maps.Marker({
     map: map,
