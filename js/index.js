@@ -56,7 +56,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots(spots) {
+function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
@@ -82,7 +82,7 @@ function displaySpots(spots) {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
-function showSpotsMarkers(spots) {
+function showSpotsMarkers() {
   var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index){
       var latlng = new google.maps.LatLng(
