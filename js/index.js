@@ -11,7 +11,7 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  searchSpots();
+  searchStores();
 }
 
 function searchStores() {
