@@ -16,13 +16,13 @@ function initMap() {
 
 function searchSpots() {
     var foundSpots = [];
-    var findAddress = document.getElementById('address-input').value;
+    var inputAddress = document.getElementById('address-input').value;
     // console.log(findAddress)
-    if (findAddress) {
+    if (inputAddress) {
       spots.forEach(function(spot) {
           var address = spot.Address;
           // console.log(address)
-          if(address == findAddress) {
+          if(address == inputAddress) {
             foundSpots.push(spot);
           }
         })
