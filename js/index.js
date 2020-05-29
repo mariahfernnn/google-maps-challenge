@@ -320,7 +320,7 @@ function createMarker(latlng, name, address, statusText, phone, index) {
 
   var iconBase = {
     url: "https://img.icons8.com/color/48/000000/starbucks.png", // url
-    scaledSize: new google.maps.Size(50, 50), // size
+    scaledSize: new google.maps.Size(30, 30), // size
   };
 
   var marker = new google.maps.Marker({
