@@ -27,7 +27,7 @@ function searchSpots() {
   })
   // console.log(foundSpots);
   displaySpots(foundSpots);
-  showSpotsMarkers();
+  showSpotsMarkers(foundSpots);
 
 }
 
