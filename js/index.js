@@ -117,7 +117,7 @@ function createMarker(latlng, name, address, index) {
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
-    label: '1'
+    label: `${index+1}`
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
