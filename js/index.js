@@ -105,7 +105,7 @@ function createMarker(latlng, name, address, index) {
             <div class="circle">
               <i class="fas fa-location-arrow"></i>
             </div>
-            <a href="http://maps.google.com/maps?q=${address}" target="_blank">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${address}">
             ${address}
           </div>
       </div>
