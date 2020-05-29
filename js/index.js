@@ -16,7 +16,7 @@ function initMap() {
 
 function searchSpots() {
   var foundSpots = [];
-  var findAddress = document.getElementById('address-input').value.toUpperCase();
+  var findAddress = document.getElementById('address-input').value;
   // console.log(findAddress)
   spots.forEach(function(spot) {
       var address = spot.Address;
@@ -25,9 +25,9 @@ function searchSpots() {
         foundSpots.push(spot);
       }
   })
-  // console.log(foundSpots);
+  console.log(foundSpots);
   displaySpots(foundSpots);
-  showSpotsMarkers(foundSpots);
+  // showSpotsMarkers(foundSpots);
 
 }
 
