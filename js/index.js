@@ -314,10 +314,14 @@ function createMarker(latlng, name, address, statusText, phone, index) {
           </div>
       </div>
   `;
+
+  var iconBase = 'https://maps.google.com/mapfiles/kml/paddle/';
+
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
-    label: `${index+1}`
+    label: `${index+1}`,
+    icon: iconBase + 'grn-blank.png'
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
