@@ -94,6 +94,10 @@ body {
     margin-top: 30px;
 }
 
+/* .store-address:hover {
+    color: #B5ADAD;
+} */
+
 .store-phone-number {
     color: #B5ADAD;
     margin-top: 15px;
@@ -168,7 +172,8 @@ body {
 }
 
 .store-container-background:hover {
-    background-color: rgb(51, 197, 213);
+    /* background-color: rgb(51, 197, 213); */
+    background-color: #00704A;
     box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
     transition: 0.3s;
 }
