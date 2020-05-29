@@ -2,39 +2,39 @@ var map;
 var markers = [];
 var infoWindow;
 function initMap() {
-  var torontoCanada = {
-    lat: 43.651070,
-    lng: -79.347015
+  var losAngeles = {
+    lat: 34.063380,
+    lng: -118.358080
   }
   map = new google.maps.Map(document.getElementById('map'), {
-    center: torontoCanada,
+    center: losAngeles,
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  displaySpots()
-  showSpotsMarkers()
+  displayStores()
+  showStoresMarkers()
   setOnClickListener();
   // searchSpots();
 }
 
-function searchSpots() {
+function searchStores() {
   var foundSpots = [];
-  var inputAddress = document.getElementById('address-input').value;
-  // console.log(findAddress)
-  if (inputAddress) {
-    spots.forEach(function(spot) {
-        var address = spot.Address;
-        // console.log(address)
-        if(address == inputAddress) {
-          foundSpots.push(spot);
+  var zipCode = document.getElementById('zip-code-input').value;
+  // console.log(zipCode)
+  if (zipCode) {
+    stores.forEach(function(store) {
+        var postal = store.address.postalCode.substring(0,5);
+        // console.log(postal)
+        if(postal == zipCode) {
+          foundStores.push(store);
         }
       })
   } else {
-    foundSpots = spots;
+    foundStores = stores;
   }
   // clearLocations();
-  // displaySpots(foundSpots);
-  // showSpotsMarkers(foundSpots);
+  // displayStores(foundStores);
+  // showStoresMarkers(foundStores);
   // setOnClickListener();
 }
 
@@ -47,73 +47,81 @@ function searchSpots() {
 // }
 
 function setOnClickListener() {
-  var spotElements = document.querySelectorAll('.spot-container');
-  // console.log(spotElements);
-  spotElements.forEach(function(elem, index) {
+  var storeElements = document.querySelectorAll('.store-container');
+  // console.log(storeElements);
+  storeElements.forEach(function(elem, index) {
     elem.addEventListener('click', function() {
       google.maps.event.trigger(markers[index], 'click');
     })
   })
 }
 
-function displaySpots() {
-  var spotsHTML = "";
-  spots.forEach(function(spot, index) {
-    var name = spot.Name;
-    var district = spot.District;
-    var address = spot.Address;
-    spotsHTML += `
-    <div class="spot-container">
-        <div class="spot-info-container">
-            <div class="spot-name">
-                <span>${name}</span>
-            </div>
-            <div class="spot-address">${address}</div>
-            <div class="spot-district">${district}</div>
-        </div>
-        <div class="spot-number-container">
-            <div class="spot-number">
-                ${index+1}
-            </div>
-        </div>
-    </div>
-    `
+function displayStores(stores) {
+  var storesHtml = "";
+  stores.forEach(function(store, index){
+      var address = store.addressLines;
+      var phone = store.phoneNumber;
+      storesHtml += `
+          <div class="store-container">
+              <div class="store-container-background">
+                  <div class="store-info-container">
+                      <div class="store-address">
+                          <span>${address[0]}</span>
+                          <span>${address[1]}</span>
+                      </div>
+                      <div class="store-phone-number">${phone}</div>
+                  </div>
+                  <div class="store-number-container">
+                      <div class="store-number">
+                          ${index+1}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      `
   });
-  document.querySelector('.spots-list').innerHTML = spotsHTML;
+  document.querySelector('.stores-list').innerHTML = storesHtml;
 }
 
-function showSpotsMarkers() {
+function showStoresMarkers(stores) {
   var bounds = new google.maps.LatLngBounds();
-  spots.forEach(function(spot, index){
+  stores.forEach(function(store, index){
       var latlng = new google.maps.LatLng(
-          spot.Y,
-          spot.X);
-      // console.log(latlng);
-      var name = spot.Name;
-      var address = spot.Address;
-      var district = spot.District;
+          store.coordinates.latitude,
+          store.coordinates.longitude);
+      var name = store.name;
+      var address = store.addressLines[0];
+      var statusText = store.openStatusText;
+      var phone = store.phoneNumber;
       bounds.extend(latlng);
-      createMarker(latlng, name, address, district, index);
+      createMarker(latlng, name, address, statusText, phone, index);
   })
   map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address, index) {
+function createMarker(latlng, name, address, statusText, phone, index) {
   var html = `
-      <div class="spot-info-window">
-          <div class="spot-info-name">
-            ${name}
+      <div class="store-info-window">
+          <div class="store-info-name">
+              ${name}
           </div>
-          <div class="spot-info-address">
-            <div class="circle">
-              <i class="fas fa-location-arrow"></i>
-            </div>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=${address}">
-            ${address}
+          <div class="store-info-status">
+              ${statusText}
+          </div>
+          <div class="store-info-address">
+              <div class="circle">
+                  <i class="fas fa-location-arrow"></i>
+              </div>
+              ${address}
+          </div>
+          <div class="store-info-phone">
+              <div class="circle">
+                  <i class="fas fa-phone-alt"></i>
+              </div>
+              ${phone}
           </div>
       </div>
   `;
-
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
