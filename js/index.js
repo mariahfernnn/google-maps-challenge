@@ -114,14 +114,10 @@ function createMarker(latlng, name, address, index) {
       </div>
   `;
 
-  // Add index label to marker later 
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
-    label: '1',
-    icon: {
-      url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-    }
+    label: '1'
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
@@ -130,6 +126,8 @@ function createMarker(latlng, name, address, index) {
   markers.push(marker);
 }
 
-
+// icon: {
+//   url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+// }
 
 
