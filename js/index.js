@@ -332,8 +332,5 @@ function createMarker(latlng, name, address, statusText, phone, index) {
   markers.push(marker);
 }
 
-// icon: {
-//   url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-// }
 
 
