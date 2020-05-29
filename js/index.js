@@ -13,7 +13,7 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   displaySpots()
   showSpotsMarkers()
-  setOnClickListener()
+  // setOnClickListener()
 }
 
 function searchSpots() {
@@ -41,17 +41,17 @@ function clearLocations() {
     markers.length = 0;
 }
 
-function setOnClickListener() {
+// function setOnClickListener() {
 
-  var spotElements = document.querySelectorAll('.spot-container');
-  // console.log(spotElements);
-  spotElements.forEach(function(elem, index) {
-    elem.addEventListener('click', function() {
-      google.maps.event.trigger(markers[index], 'click');
-    })
-  })
+//   var spotElements = document.querySelectorAll('.spot-container');
+//   // console.log(spotElements);
+//   spotElements.forEach(function(elem, index) {
+//     elem.addEventListener('click', function() {
+//       google.maps.event.trigger(markers[index], 'click');
+//     })
+//   })
 
-}
+// }
 
 function displaySpots(spots) {
   var spotsHTML = "";
@@ -78,22 +78,6 @@ function displaySpots(spots) {
   });
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
-
-// function showSpotsMarkers() {
-//   var bounds = new google.maps.LatLngBounds();
-//   spots.forEach(function(spot, index) {
-//     var latlng = new google.maps.LatLng(
-//       spot.Y,
-//       spot.X);
-//     console.log(latlng);
-//     var name = spot.Name;
-//     var address = spot.Address;
-//     var district = spot.District;
-//     bounds.extend(latlng);
-//     createMarker(latlng, name, address, district, index);
-//   })
-//   map.fitBounds(bounds);
-// }
 
 function showSpotsMarkers() {
   var bounds = new google.maps.LatLngBounds();
