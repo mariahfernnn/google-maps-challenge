@@ -13,45 +13,45 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   displaySpots()
   showSpotsMarkers()
-  // setOnClickListener()
+  setOnClickListener()
 }
 
-// function searchSpots() {
-//   var foundSpots = [];
-//   // Change this variable name to address
-//   var postalCode = document.getElementById('postal-code-input').value;
+function searchSpots() {
+  var foundSpots = [];
+  // Change this variable name to address
+  var postalCode = document.getElementById('postal-code-input').value;
   
-//   // console.log(postalCode)
-//   spots.forEach(function(spot) {
-//       var address = spot.Address;
-//       // console.log(address)
-//       if(address == postalCode) {
-//         foundSpots.push();
-//       }
-//   })
-//   // console.log(foundSpots);
-//   displaySpots(foundSpots);
-// }
+  // console.log(postalCode)
+  spots.forEach(function(spot) {
+      var address = spot.Address;
+      // console.log(address)
+      if(address == postalCode) {
+        foundSpots.push();
+      }
+  })
+  // console.log(foundSpots);
+  displaySpots(foundSpots);
+}
 
-// function clearLocations() {
-//     infoWindow.close();
-//     for (var i = 0; i < markers.length; i++) {
-//       markers[i].setMap(null);
-//     }
-//     markers.length = 0;
-// }
+function clearLocations() {
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers.length = 0;
+}
 
-// function setOnClickListener() {
+function setOnClickListener() {
 
-//   var spotElements = document.querySelectorAll('.spot-container');
-//   // console.log(spotElements);
-//   spotElements.forEach(function(elem, index) {
-//     elem.addEventListener('click', function() {
-//       google.maps.event.trigger(markers[index], 'click');
-//     })
-//   })
+  var spotElements = document.querySelectorAll('.spot-container');
+  // console.log(spotElements);
+  spotElements.forEach(function(elem, index) {
+    elem.addEventListener('click', function() {
+      google.maps.event.trigger(markers[index], 'click');
+    })
+  })
 
-// }
+}
 
 function displaySpots() {
   var spotsHTML = "";
