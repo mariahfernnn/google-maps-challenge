@@ -13,6 +13,7 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow();
   displaySpots()
   showSpotsMarkers()
+  setOnClickListener();
   // searchSpots();
 }
 
@@ -34,7 +35,7 @@ function searchSpots() {
     // clearLocations();
     // displaySpots(foundSpots);
     // showSpotsMarkers(foundSpots);
-    setOnClickListener();
+    // setOnClickListener();
 }
 
 // function clearLocations() {
