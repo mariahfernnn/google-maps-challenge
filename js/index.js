@@ -11,32 +11,38 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
+  displaySpots()
+  showSpotsMarkers()
+  setOnClickListener()
 }
 
 function searchSpots() {
     var foundSpots = [];
     var findAddress = document.getElementById('address-input').value;
     // console.log(findAddress)
-    spots.forEach(function(spot) {
-        var address = spot.Address;
-        // console.log(address)
-        if(address == findAddress) {
-          foundSpots.push(spot);
-        }
-    })
-    console.log(foundSpots);
+    if (findAddress) {
+      spots.forEach(function(spot) {
+          var address = spot.Address;
+          // console.log(address)
+          if(address == findAddress) {
+            foundSpots.push(spot);
+          }
+        })
+    } else {
+      foundSpots = spots;
+    }
     displaySpots(foundSpots);
-    showSpotsMarkers(foundSpots);
-    setOnClickListener();
+    // showSpotsMarkers(foundSpots);
+    // setOnClickListener();
 }
 
-function clearLocations() {
-    infoWindow.close();
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-    }
-    markers.length = 0;
-}
+// function clearLocations() {
+//     infoWindow.close();
+//     for (var i = 0; i < markers.length; i++) {
+//       markers[i].setMap(null);
+//     }
+//     markers.length = 0;
+// }
 
 function setOnClickListener() {
   var spotElements = document.querySelectorAll('.spot-container');
@@ -49,7 +55,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots(spots) {
+function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
@@ -75,7 +81,7 @@ function displaySpots(spots) {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
-function showSpotsMarkers(spots) {
+function showSpotsMarkers() {
   var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index){
       var latlng = new google.maps.LatLng(
