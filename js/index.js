@@ -79,39 +79,13 @@ function displaySpots() {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
-// function displaySpots(spots) {
-//   var spotsHTML = "";
-//   spots.forEach(function(spot, index) {
-//     var name = spot.Name;
-//     var district = spot.District;
-//     var address = spot.Address;
-//     spotsHTML += `
-//     <div class="spot-container">
-//         <div class="spot-info-container">
-//             <div class="spot-name">
-//                 <span>${name}</span>
-//             </div>
-//             <div class="spot-address">${address}</div>
-//             <div class="spot-district">${district}</div>
-//         </div>
-//         <div class="spot-number-container">
-//             <div class="spot-number">
-//                 ${index+1}
-//             </div>
-//         </div>
-//     </div>
-//     `
-//   });
-//   document.querySelector('.spots-list').innerHTML = spotsHTML;
-// }
-
 function showSpotsMarkers() {
   var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index){
       var latlng = new google.maps.LatLng(
           spot.Y,
           spot.X);
-      console.log(latlng);
+      // console.log(latlng);
       var name = spot.Name;
       var address = spot.Address;
       var district = spot.District;
@@ -131,6 +105,7 @@ function createMarker(latlng, name, address, index) {
             <div class="circle">
               <i class="fas fa-location-arrow"></i>
             </div>
+            <a href="http://maps.google.com/maps?q=${address}" target="_blank">
             ${address}
           </div>
       </div>
