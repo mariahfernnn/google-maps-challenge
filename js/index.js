@@ -16,30 +16,30 @@ function initMap() {
   // setOnClickListener()
 }
 
-function searchSpots() {
-  var foundSpots = [];
-  // Change this variable name to address
-  var postalCode = document.getElementById('postal-code-input').value;
+// function searchSpots() {
+//   var foundSpots = [];
+//   // Change this variable name to address
+//   var postalCode = document.getElementById('postal-code-input').value;
   
-  // console.log(postalCode)
-  spots.forEach(function(spot) {
-      var address = spot.Address;
-      // console.log(address)
-      if(address == postalCode) {
-        foundSpots.push();
-      }
-  })
-  // console.log(foundSpots);
-  displaySpots(foundSpots);
-}
+//   // console.log(postalCode)
+//   spots.forEach(function(spot) {
+//       var address = spot.Address;
+//       // console.log(address)
+//       if(address == postalCode) {
+//         foundSpots.push();
+//       }
+//   })
+//   // console.log(foundSpots);
+//   displaySpots(foundSpots);
+// }
 
-function clearLocations() {
-    infoWindow.close();
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
-    }
-    markers.length = 0;
-}
+// function clearLocations() {
+//     infoWindow.close();
+//     for (var i = 0; i < markers.length; i++) {
+//       markers[i].setMap(null);
+//     }
+//     markers.length = 0;
+// }
 
 // function setOnClickListener() {
 
@@ -53,7 +53,7 @@ function clearLocations() {
 
 // }
 
-function displaySpots(spots) {
+function displaySpots() {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
@@ -78,6 +78,32 @@ function displaySpots(spots) {
   });
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
+
+// function displaySpots(spots) {
+//   var spotsHTML = "";
+//   spots.forEach(function(spot, index) {
+//     var name = spot.Name;
+//     var district = spot.District;
+//     var address = spot.Address;
+//     spotsHTML += `
+//     <div class="spot-container">
+//         <div class="spot-info-container">
+//             <div class="spot-name">
+//                 <span>${name}</span>
+//             </div>
+//             <div class="spot-address">${address}</div>
+//             <div class="spot-district">${district}</div>
+//         </div>
+//         <div class="spot-number-container">
+//             <div class="spot-number">
+//                 ${index+1}
+//             </div>
+//         </div>
+//     </div>
+//     `
+//   });
+//   document.querySelector('.spots-list').innerHTML = spotsHTML;
+// }
 
 function showSpotsMarkers() {
   var bounds = new google.maps.LatLngBounds();
