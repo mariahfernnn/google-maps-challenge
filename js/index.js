@@ -50,7 +50,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots(stores) {
+function displaySpots(spots) {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
@@ -76,7 +76,7 @@ function displaySpots(stores) {
   document.querySelector('.spots-list').innerHTML = spotsHTML;
 }
 
-function showSpotsMarkers() {
+function showSpotsMarkers(spots) {
   var bounds = new google.maps.LatLngBounds();
   spots.forEach(function(spot, index){
       var latlng = new google.maps.LatLng(
