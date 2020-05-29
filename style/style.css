@@ -55,6 +55,7 @@ body {
 .search i {
     color: white;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .spots-list-container {
