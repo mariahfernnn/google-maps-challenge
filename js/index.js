@@ -18,15 +18,13 @@ function initMap() {
 
 function searchSpots() {
   var foundSpots = [];
-  // Change this variable name to address
-  var findAddress = document.getElementById('address-input').value;
-  
-  // console.log(postalCode)
+  var findAddress = document.getElementById('address-input').value.toUpperCase();
+  // console.log(findAddress)
   spots.forEach(function(spot) {
       var address = spot.Address;
       // console.log(address)
-      if(address == postalCode) {
-        foundSpots.push();
+      if(address == findAddress) {
+        foundSpots.push(spot);
       }
   })
   // console.log(foundSpots);
