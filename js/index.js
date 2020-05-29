@@ -316,14 +316,18 @@ function createMarker(latlng, name, address, statusText, phone, index) {
   `;
 
   // var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-  var iconBase = 'https://img.icons8.com/color/48/000000/';
+  // var iconBase = 'https://img.icons8.com/color/48/000000/';
 
+  var iconBase = {
+    url: "https://img.icons8.com/color/48/000000/starbucks.png", // url
+    scaledSize: new google.maps.Size(50, 50), // size
+  };
 
   var marker = new google.maps.Marker({
     map: map,
     position: latlng,
     label: `${index+1}`,
-    icon: iconBase + 'starbucks.png'
+    icon: iconBase 
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
