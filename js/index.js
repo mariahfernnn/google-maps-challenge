@@ -19,7 +19,7 @@ function initMap() {
 function searchSpots() {
   var foundSpots = [];
   // Change this variable name to address
-  var postalCode = document.getElementById('postal-code-input').value;
+  var findAddress = document.getElementById('address-input').value;
   
   // console.log(postalCode)
   spots.forEach(function(spot) {
@@ -42,7 +42,6 @@ function clearLocations() {
 }
 
 function setOnClickListener() {
-
   var spotElements = document.querySelectorAll('.spot-container');
   // console.log(spotElements);
   spotElements.forEach(function(elem, index) {
