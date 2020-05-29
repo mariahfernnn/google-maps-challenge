@@ -328,7 +328,9 @@ function createMarker(latlng, name, address, statusText, phone, index) {
     position: latlng,
     label: {
       text: `${index+1}`,
-      color: 'red'
+      color: '#333333',
+      fontSize: '20px',
+      fontWeight: 'bold'
     },
     icon: iconBase 
   });
