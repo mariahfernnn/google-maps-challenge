@@ -11,10 +11,7 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  displayStores()
-  showStoresMarkers()
-  setOnClickListener();
-  // searchSpots();
+  searchSpots();
 }
 
 function searchStores() {
@@ -32,19 +29,19 @@ function searchStores() {
   } else {
     foundStores = stores;
   }
-  // clearLocations();
-  // displayStores(foundStores);
-  // showStoresMarkers(foundStores);
-  // setOnClickListener();
+  clearLocations();
+  displayStores(foundStores);
+  showStoresMarkers(foundStores);
+  setOnClickListener();
 }
 
-// function clearLocations() {
-//     infoWindow.close();
-//     for (var i = 0; i < markers.length; i++) {
-//       markers[i].setMap(null);
-//     }
-//     markers.length = 0;
-// }
+function clearLocations() {
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers.length = 0;
+}
 
 function setOnClickListener() {
   var storeElements = document.querySelectorAll('.store-container');
