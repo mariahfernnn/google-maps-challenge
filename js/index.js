@@ -49,7 +49,7 @@ function setOnClickListener() {
 
 }
 
-function displaySpots() {
+function displaySpots(stores) {
   var spotsHTML = "";
   spots.forEach(function(spot, index) {
     var name = spot.Name;
