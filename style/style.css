@@ -58,7 +58,7 @@ body {
     cursor: pointer;
 }
 
-.spots-list-container {
+.stores-list-container {
     width: 400px;
     background-color: white;
     position: absolute;
@@ -71,20 +71,20 @@ body {
     opacity: 0.8;
 }
 
-.spots-list {
+.stores-list {
     padding-left: 20px;
     padding-right: 20px;
     overflow-y: scroll;
     height: 100%;
 }
 
-.spot-container {
+.store-container {
     display: flex;
     border-bottom: 1px solid #979797;
     cursor: pointer;
 }
 
-.spot-container:hover {
+.store-container:hover {
     background-color:  rgb(51, 197, 213);
     box-shadow: 0 2px 5px 2px rgba(0,0,0,.5);
     opacity: 0.6;
@@ -92,43 +92,28 @@ body {
     border-radius: 15px;
 } 
 
-.spot-info-container {
+.store-info-container {
     flex-grow: 1;
 }
 
-/* .spot-info-container:hover {
-    color: black !important;
-} */
-
-.spot-name {
+.store-address {
     font-size: 21px;
-    /* color: #514C4C; */
-    color: #333333;
+    color: #514C4C;
     margin-top: 30px;
 }
 
-.spot-address {
-    /* color: #B5ADAD; */
-    color: #514C4C;
+.store-phone-number {
+    color: #B5ADAD;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.spot-district {
-    /* color: #B5ADAD; */
-    /* float: right; */
-    font-size: 10px;
-    color: #514C4C;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.spot-number-container {
+.store-number-container {
     align-items: center;
     display: flex;
 }
 
-.spot-number {
+.store-number {
     width: 30px;
     height: 30px;
     background-color: #454E53;
@@ -139,7 +124,7 @@ body {
     border-radius: 50%;
 }
 
-.spot-address span {
+.store-address span {
     display: block;
 }
 
