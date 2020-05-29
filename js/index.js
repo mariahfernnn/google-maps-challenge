@@ -11,24 +11,23 @@ function initMap() {
     zoom: 8
   });
   infoWindow = new google.maps.InfoWindow();
-  // setOnClickListener()
 }
 
 function searchSpots() {
-  var foundSpots = [];
-  var findAddress = document.getElementById('address-input').value;
-  // console.log(findAddress)
-  spots.forEach(function(spot) {
-      var address = spot.Address;
-      // console.log(address)
-      if(address == findAddress) {
-        foundSpots.push(spot);
-      }
-  })
-  console.log(foundSpots);
-  displaySpots(foundSpots);
-  // showSpotsMarkers(foundSpots);
-
+    var foundSpots = [];
+    var findAddress = document.getElementById('address-input').value;
+    // console.log(findAddress)
+    spots.forEach(function(spot) {
+        var address = spot.Address;
+        // console.log(address)
+        if(address == findAddress) {
+          foundSpots.push(spot);
+        }
+    })
+    console.log(foundSpots);
+    displaySpots(foundSpots);
+    showSpotsMarkers(foundSpots);
+    setOnClickListener();
 }
 
 function clearLocations() {
