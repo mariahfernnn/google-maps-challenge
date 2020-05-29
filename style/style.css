@@ -80,6 +80,7 @@ body {
 .spot-container {
     display: flex;
     border-bottom: 1px solid #979797;
+    cursor: pointer;
 }
 
 .spot-container:hover {
