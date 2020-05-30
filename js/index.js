@@ -341,5 +341,13 @@ function createMarker(latlng, name, address, statusText, phone, index) {
   markers.push(marker);
 }
 
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
 
 
