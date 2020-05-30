@@ -208,6 +208,7 @@ function initMap() {
   searchStores();
 }
 
+
 function searchStores() {
   var foundStores = [];
   var zipCode = document.getElementById('zip-code-input').value;
@@ -341,13 +342,13 @@ function createMarker(latlng, name, address, statusText, phone, index) {
   markers.push(marker);
 }
 
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
+// function toggleBounce() {
+//   if (marker.getAnimation() !== null) {
+//     marker.setAnimation(null);
+//   } else {
+//     marker.setAnimation(google.maps.Animation.BOUNCE);
+//   }
+// }
 
 
 
