@@ -1,6 +1,8 @@
 ## Clever Programmer's 5-Day JavaScript Challenge: Google Maps
 
-## FontAwesome Link
+# But First... A Triple, Venti, Soy, No Foam Latte!
 
-https://kit.fontawesome.com/c939d0e917.js
+But First... is a Starbucks Locator created during Clever Programmer's 5-Day JavaScript Challenge.
+
+A hosted version is available [here](mariahfernnn-starbucks-locator.imfast.io)
 
