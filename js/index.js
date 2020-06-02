@@ -305,6 +305,8 @@ function createMarker(latlng, name, address, statusText, phone, index) {
                   <i class="fas fa-location-arrow"></i>
               </div>
               <a href="https://www.google.com/maps/dir/?api=1&destination=${address}">
+                ${address}
+              </a>
           </div>
           <div class="store-info-phone">
               <div class="circle">
