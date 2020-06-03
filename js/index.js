@@ -304,13 +304,13 @@ function createMarker(latlng, name, address, statusText, phone, index) {
               <div class="circle">
                   <i class="fas fa-location-arrow"></i>
               </div>
-              ${address}
+              <a href="https://www.google.com/maps/dir/?api=1&destination=${address}">${address}</a>
           </div>
           <div class="store-info-phone">
               <div class="circle">
                   <i class="fas fa-phone-alt"></i>
               </div>
-              ${phone}
+              <a href="tel:${phone}">${phone}</a>
           </div>
       </div>
   `;
